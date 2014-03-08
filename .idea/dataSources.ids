@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source source="LOCAL" name="dataSource" uuid="bbf2a828-5ead-4f83-b1d4-7111f3360c52">
+    <database-info product="MySQL" version="5.6.15" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.26 ( Revision: ${bzr.revision-id} )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <schema name="" catalog="zhct"/>
+    <table name="t_buy" schema="" catalog="zhct" type="TABLE">
+      <column name="wechat_openid" sqlType="VARCHAR" length="45" precision="0" nullable="false" jdbcType="12" remarks="5Lya5ZGY5b6u5L+hb3Blbmlk"/>
+      <column name="restaurantcode" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" remarks="6aSQ5Y6F5Luj56CB"/>
+      <column name="menuid" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" remarks="6I+c5ZOBaWQ="/>
+      <column name="buycount" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" remarks="6I+c5ZOB5pWw6YeP"/>
+      <column name="createdate" sqlType="TIMESTAMP" length="19" precision="0" nullable="true" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="wechat_openid"/>
+    </table>
+    <table name="t_member" schema="" catalog="zhct" type="TABLE">
+      <column name="memberid" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="subscribe" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" remarks="55So5oi35piv5ZCm6K6i6ZiF6K+l5YWs5LyX5Y+35qCH6K+G77yM5YC85Li6MOaXtu+8jOS7o+ihqOatpOeUqOaIt+ayoeacieWFs+azqOivpeWFrOS8l+WPt++8jOaLieWPluS4jeWIsOWFtuS9meS/oeaBrw=="/>
+      <column name="wechat_account" sqlType="VARCHAR" length="20" precision="0" nullable="true" jdbcType="12" remarks="5b6u5L+h6LSm5Y+3"/>
+      <column name="restaurant_wechat" sqlType="VARCHAR" length="20" precision="0" nullable="true" jdbcType="12" remarks="6aSQ6aaG5b6u5L+h5pyN5Yqh5Y+3"/>
+      <column name="nickname" sqlType="VARCHAR" length="45" precision="0" nullable="true" jdbcType="12" remarks="5b6u5L+h5pi156ew"/>
+      <column name="openid" sqlType="VARCHAR" length="45" precision="0" nullable="true" jdbcType="12" remarks="5b6u5L+hb3Blbmlk"/>
+      <column name="sex" sqlType="VARCHAR" length="4" precision="0" nullable="true" jdbcType="12"/>
+      <column name="phone" sqlType="VARCHAR" length="20" precision="0" nullable="true" jdbcType="12"/>
+      <column name="headimgurl" sqlType="VARCHAR" length="100" precision="0" nullable="true" jdbcType="12" remarks="55So5oi35aS05YOP"/>
+      <column name="subscribetime" sqlType="DATETIME" length="19" precision="0" nullable="true" jdbcType="93"/>
+      <column name="city" sqlType="VARCHAR" length="20" precision="0" nullable="true" jdbcType="12" remarks="5Z+O5biC"/>
+      <column name="country" sqlType="VARCHAR" length="45" precision="0" nullable="true" jdbcType="12" remarks="5Zu95a62"/>
+      <column name="province" sqlType="VARCHAR" length="45" precision="0" nullable="true" jdbcType="12" remarks="55yB"/>
+      <column name="memberlevel" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="createdate" sqlType="TIMESTAMP" length="19" precision="0" nullable="true" jdbcType="93"/>
+      <column name="validflag" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="delflag" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="lastmodifydate" sqlType="DATETIME" length="19" precision="0" nullable="true" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="memberid"/>
+      <index name="restaurant_wechat_UNIQUE" unique="true" columns="restaurant_wechat"/>
+      <index name="wechat_account_UNIQUE" unique="true" columns="wechat_account"/>
+    </table>
+    <table name="t_menu" schema="" catalog="zhct" type="TABLE">
+      <column name="menuid" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" remarks="6I+c5ZOBaWQ="/>
+      <column name="menuname" sqlType="VARCHAR" length="45" precision="0" nullable="true" jdbcType="12" remarks="6I+c5ZCN"/>
+      <column name="price" sqlType="DOUBLE" length="22" precision="0" nullable="true" jdbcType="8" remarks="5Lu35qC8"/>
+      <column name="menutype" sqlType="VARCHAR" length="10" precision="0" nullable="true" jdbcType="12" remarks="6I+c5ZOB57G75Yir77yI5YeJ6I+c77yM6Z2i6aOf77yM5rGk57G7562J77yJ"/>
+      <column name="cuisines" sqlType="VARCHAR" length="45" precision="0" nullable="true" jdbcType="12" remarks="6I+c57O777yI5rmY6I+c44CB5bed6I+c44CB6bKB6I+c44CB6KW/6aSQ77yJ"/>
+      <column name="hotlevel" sqlType="VARCHAR" length="10" precision="0" nullable="true" jdbcType="12" remarks="6I+c5ZOB5ZGz6YGT57G75Z6L77yI5Yqy6L6j77yM5Lit6L6j77yM5b6u6L6j562J77yJ"/>
+      <column name="star" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" remarks="5pif57qn"/>
+      <column name="remark" sqlType="VARCHAR" length="100" precision="0" nullable="true" jdbcType="12"/>
+      <column name="createdate" sqlType="TIMESTAMP" length="19" precision="0" nullable="true" jdbcType="93"/>
+      <column name="validflag" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="delflag" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="lastmodifydate" sqlType="DATETIME" length="19" precision="0" nullable="true" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="menuid"/>
+    </table>
+    <table name="t_order" schema="" catalog="zhct" type="TABLE">
+      <column name="orderid" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="wechat_openid" sqlType="VARCHAR" length="45" precision="0" nullable="true" jdbcType="12"/>
+      <column name="restaurantid" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="orderstatus" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" remarks="54q25oCB77yIMOS4i+WNle+8jDHmlK/ku5jvvIwy5a6M5oiQ77yJ"/>
+      <column name="paytime" sqlType="DATETIME" length="19" precision="0" nullable="true" jdbcType="93" remarks="5pSv5LuY5pe26Ze0"/>
+      <column name="payable_amount" sqlType="DOUBLE" length="22" precision="0" nullable="true" jdbcType="8" remarks="6K6i5Y2V5bqU5LuY6YeR6aKd"/>
+      <column name="discount" sqlType="DOUBLE" length="22" precision="0" nullable="true" jdbcType="8" remarks="5oqY5omj"/>
+      <column name="actual_amount" sqlType="DOUBLE" length="22" precision="0" nullable="true" jdbcType="8" remarks="6K6i5Y2V5a6e5LuY6YeR6aKd"/>
+      <column name="hui_amount" sqlType="DOUBLE" length="22" precision="0" nullable="true" jdbcType="8" remarks="5LyY5oOg6YeR6aKd"/>
+      <column name="createdate" sqlType="TIMESTAMP" length="19" precision="0" nullable="true" jdbcType="93"/>
+      <column name="validflag" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="deflag" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="lastmodifydate" sqlType="DATETIME" length="19" precision="0" nullable="true" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="orderid"/>
+    </table>
+    <table name="t_order_detail" schema="" catalog="zhct" type="TABLE">
+      <column name="orderdetailid" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" remarks="6K6i5Y2V5piO57uGaWQ="/>
+      <column name="orderid" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" remarks="6K6i5Y2VaWQ="/>
+      <column name="menuid" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" remarks="6I+c5ZOBaWQ="/>
+      <column name="menucount" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" remarks="5pWw6YeP"/>
+      <column name="remark" sqlType="VARCHAR" length="100" precision="0" nullable="true" jdbcType="12" remarks="5aSH5rOo"/>
+      <primary-key name="PRIMARY" columns="orderdetailid"/>
+    </table>
+    <table name="t_role" schema="" catalog="zhct" type="TABLE">
+      <column name="roleid" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" remarks="6KeS6ImyaWQ="/>
+      <column name="rolename" sqlType="VARCHAR" length="45" precision="0" nullable="true" jdbcType="12" remarks="6KeS6Imy5ZCN56ew"/>
+      <column name="createdate" sqlType="TIMESTAMP" length="19" precision="0" nullable="true" jdbcType="93"/>
+      <column name="lastmodifydate" sqlType="DATETIME" length="19" precision="0" nullable="true" jdbcType="93"/>
+      <column name="delflag" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="validflag" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="roleid"/>
+      <index name="rolename_UNIQUE" unique="true" columns="rolename"/>
+    </table>
+    <table name="t_user" schema="" catalog="zhct" type="TABLE">
+      <column name="userid" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="loginname" sqlType="VARCHAR" length="45" precision="0" nullable="false" jdbcType="12" remarks="55m75b2V5ZCN"/>
+      <column name="companycode" sqlType="VARCHAR" length="45" precision="0" nullable="true" jdbcType="12" remarks="5YWs5Y+45Luj56CB"/>
+      <column name="companyname" sqlType="VARCHAR" length="45" precision="0" nullable="true" jdbcType="12" remarks="5YWs5Y+45ZCN56ew"/>
+      <column name="restaurantcode" sqlType="VARCHAR" length="45" precision="0" nullable="true" jdbcType="12" remarks="6aSQ5Y6F5Luj56CB"/>
+      <column name="restaurantname" sqlType="VARCHAR" length="45" precision="0" nullable="true" jdbcType="12" remarks="6aSQ5Y6F5ZCN56ew"/>
+      <column name="phone" sqlType="VARCHAR" length="45" precision="0" nullable="true" jdbcType="12" remarks="6IGU57O755S16K+d"/>
+      <column name="mobilephone" sqlType="VARCHAR" length="45" precision="0" nullable="true" jdbcType="12" remarks="5omL5py65Y+3"/>
+      <column name="address" sqlType="VARCHAR" length="100" precision="0" nullable="true" jdbcType="12" remarks="6IGU57O75Zyw5Z2A"/>
+      <column name="email" sqlType="VARCHAR" length="45" precision="0" nullable="true" jdbcType="12" remarks="55S15a2Q6YKu5Lu2"/>
+      <column name="restaurantpep" sqlType="VARCHAR" length="45" precision="0" nullable="true" jdbcType="12" remarks="6aSQ5Y6F6LSf6LSj5Lq6"/>
+      <column name="amount" sqlType="DOUBLE" length="22" precision="0" nullable="true" jdbcType="8" remarks="6LSm5oi36YeR6aKd"/>
+      <column name="createdate" sqlType="TIMESTAMP" length="19" precision="0" nullable="true" jdbcType="93" remarks="5Yib5bu65pe26Ze0"/>
+      <column name="validflag" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" remarks="5pyJ5pWI5qCH5b+X"/>
+      <column name="delflag" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" remarks="5Yig6Zmk5qCH5b+X"/>
+      <column name="lastmodifydate" sqlType="DATETIME" length="19" precision="0" nullable="true" jdbcType="93" remarks="5pyA5ZCO5L+u5pS55pe26Ze0"/>
+      <primary-key name="PRIMARY" columns="userid"/>
+      <index name="loginname_UNIQUE" unique="true" columns="loginname"/>
+    </table>
+    <table name="t_usertorole" schema="" catalog="zhct" type="TABLE">
+      <column name="roleid" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" remarks="6KeS6ImyaWQ="/>
+      <column name="userid" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" remarks="55So5oi3aWQ="/>
+      <primary-key name="PRIMARY" columns="roleid,userid"/>
+    </table>
+  </data-source>
+</component>

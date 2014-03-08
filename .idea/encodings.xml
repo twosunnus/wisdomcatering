@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/WebRoot/META-INF/MANIFEST.MF" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/WebRoot/WEB-INF/lib/aopalliance-1.0.jar" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/WebRoot/WEB-INF/lib/commons-pool-1.6.jar" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/WebRoot/WEB-INF/lib/slf4j-jdk14-1.7.6.jar" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/WebRoot/catering/error/403.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/WebRoot/catering/error/404.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/WebRoot/catering/error/500.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/WebRoot/catering/error/505.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/WebRoot/catering/error/accessDenied.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/WebRoot/catering/error/error.css" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/WebRoot/catering/error/error.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/config/log4j.properties" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/config/mail.properties" charset="GBK" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>
+

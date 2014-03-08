@@ -1,9 +1,9 @@
 package com.catering.common.service;
 
 import com.catering.common.mapper.IUserMapper;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -15,7 +15,7 @@ import java.util.List;
  */
 @Service
 public class CommonServiceImpl implements CommonService {
-    @Autowired
+    @Resource
     private IUserMapper iUserMapper;
 
     @Override
