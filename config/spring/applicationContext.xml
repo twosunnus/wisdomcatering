@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <!-- 采用注解的方式配置bean -->
+    <context:annotation-config/>
+    <!-- aop注解支持 -->
+    <aop:aspectj-autoproxy/>
+    <!--<bean id="annotationAwareAspectJAutoProxyCreator"-->
+    <!--class="org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator"/>-->
+
+    <!-- 对包中的所有类进行扫描，以完成Bean创建和自动依赖注入的功能 -->
+    <context:component-scan base-package="com.catering">
+        <!-- 允许定义过滤器将基包下的某些类纳入或排除
+        <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/> -->
+    </context:component-scan>
+
+    <!--<bean id="propertyPlaceholderConfigurer"-->
+    <!--class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">-->
+    <!--<property name="location" value="classpath:mysql.properties"/>-->
+    <!--</bean>-->
+    <!-- 数据库配置文件位置 -->
+    <context:property-placeholder location="classpath:mysql.properties"/>
+
+    <!-- 配置数据库连接池，使用dbcp -->
+    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+        <property name="driverClassName" value="${jdbc.driverClassName}"></property>
+        <property name="url" value="${jdbc.databaseurl}"></property>
+        <property name="username" value="${jdbc.username}"></property>
+        <property name="password" value="${jdbc.password}"></property>
+        <!-- 连接池启动时的初始值 -->
+        <property name="initialSize" value="2"/>
+        <!-- 连接池的最大值 -->
+        <property name="maxActive" value="500"/>
+        <!-- 最大空闲值.当经过一个高峰时间后，连接池可以慢慢将已经用不到的连接慢慢释放一部分，一直减少到maxIdle为止  -->
+        <property name="maxIdle" value="4"/>
+        <!-- 最小空闲值.当空闲的连接数少于阀值时，连接池就会预申请去一些连接，以免洪峰来时来不及申请 -->
+        <property name="minIdle" value="2"/>
+    </bean>
+
+    <!-- 配置事物管理  -->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+    <!--在想要进行事务管理的方法上面添加@Transactional注释-->
+    <tx:annotation-driven transaction-manager="transactionManager"/>
+
+</beans>

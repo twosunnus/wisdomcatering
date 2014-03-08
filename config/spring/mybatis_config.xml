@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- MyBatis定义数据源,同意加载配置 -->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="configLocation" value="classpath:mappers/SqlMapConfig.xml"/>
+        <property name="mapperLocations" value="classpath*:/mappers/**/*Mapper.xml"/>
+    </bean>
+
+    <!-- 配置SqlSessionTemplate -->
+    <bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
+        <constructor-arg name="sqlSessionFactory" ref="sqlSessionFactory"/>
+    </bean>
+
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.catering"/>
+        <property name="markerInterface" value="com.catering.base.mapper.SqlMapper"/>
+    </bean>
+
+    <!--&lt;!&ndash; 数据映射器类  mapper bean &ndash;&gt;-->
+    <!--<bean id="iUserMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">-->
+    <!--<property name="sqlSessionFactory" ref="sqlSessionFactory"/>-->
+    <!--&lt;!&ndash; 注意指定的映射器类必须是一个接口，而不是具体的实现类  &ndash;&gt;-->
+    <!--<property name="mapperInterface" value="com.catering.common.mapper.IUserMapper"/>-->
+    <!--</bean>-->
+
+
+</beans>

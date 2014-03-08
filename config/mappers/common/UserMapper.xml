@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 这里namespace必须是接口的路径，不然要运行的时候要报错 “is not known to the MapperRegistry”-->
+<mapper namespace="com.catering.common.mapper.IUserMapper">
+
+    <insert id="insertEntity" parameterType="User">
+        INSERT INTO t_user (userid, loginname, companycode, companyname, restaurantcode, restaurantname, phone,
+                            mobilephone, address, email, restaurantpep, amount, createdate, validflag, delflag, lastmodifydate)
+        VALUES (
+            #{userid}, #{loginname}, #{companycode}, #{companyname}, #{restaurantcode}, #{restaurantname}, #{phone},
+            #{mobilephone}, #{address}, #{email}, #{restaurantpep}, #{amount}, #{createdate}, #{validflag}, #{delflag},
+            #{lastmodifydate}
+        )
+    </insert>
+    <update id="updateEntity" parameterType="int">
+        UPDATE t_user u
+        SET u.email = #{email}
+        WHERE u.userid = #{userid}
+    </update>
+    <delete id="deleteEntityById" parameterType="Integer">
+        DELETE FROM t_user u
+        WHERE u.userid = #{userid}
+    </delete>
+
+    <select id="findEntityById" resultType="User" resultMap="findEntityListResultMap" parameterType="int">
+        SELECT
+            *
+        FROM t_user u
+        WHERE u.userid = #{userid}
+    </select>
+
+    <select id="findEntityList" resultType="List" resultMap="findEntityListResultMap">
+        <!-- 这里sql结尾不能加分号，否则报“ORA-00911”的错误 -->
+        SELECT * FROM t_user
+    </select>
+
+    <!-- 自定义映射关系 -->
+    <resultMap type="User" id="findEntityListResultMap" extends="commonPojo">
+        <!-- 标记结果作为ID 可以帮助提高整体效能 -->
+        <id property="userid" column="userid"/>
+        <!-- 注入到字段或JavaBean 属性的普通结果 -->
+        <result property="loginname" column="loginname"/>
+        <result property="password" column="password"/>
+        <result property="name" column="name"/>
+    </resultMap>
+
+</mapper>
