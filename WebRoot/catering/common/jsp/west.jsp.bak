@@ -1,0 +1,275 @@
+<%@ page import="com.catering.base.util.Path" %>
+<%--
+  Created by IntelliJ IDEA.
+  User: sunqichang
+  Date: 14-3-9
+  Time: 下午4:04
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<head>
+    <%@include file="../include/easyui_header.jsp" %>
+    <%@include file="../include/bootstrap_header.jsp" %>
+    <link rel="stylesheet" type="text/css"
+          href="<%=Path.webRoot%>/common/style/themeclue_style.css">
+</head>
+<form name="modulo" class="sidebar-form" action="search">
+<input type="hidden" id="sort_by" value="date">
+<input type="hidden" id="sort_data" value="DESC">
+<input type="hidden" id="pag" value="1">
+
+<div class="accordion" id="accordion2">
+<div class="accordion-group boxshadow">
+    <div class="accordion-heading">
+        <a class="accordion-toggle expanded" data-toggle="collapse" data-target="#collapseTwo" href="#">
+            KIND
+        </a>
+    </div>
+    <!-- accordion-heading -->
+    <div id="collapseTwo" class="accordion-body in collapse" style="height: auto;">
+        <div class="accordion-inner clearfix">
+            <input type="checkbox" id="cb8" name="blog" value="1">
+            <label for="cb8" class="checkbox field">
+                <strong>BLOG</strong> <span id="objN8">(283)</span><span class="chbx"></span>
+            </label>
+        </div>
+        <!-- accordion-inner -->
+        <div class="accordion-inner clearfix">
+            <input type="checkbox" id="cb9" name="news" value="1">
+            <label for="cb9" class="checkbox field">
+                <strong>NEWS/MAGAZINE</strong> <span id="objN9">(26)</span><span class="chbx"></span>
+            </label>
+        </div>
+        <!-- accordion-inner -->
+        <div class="accordion-inner clearfix">
+            <input type="checkbox" id="cb10" name="portfolio" value="1">
+            <label for="cb10" class="checkbox field">
+                <strong>PORTFOLIO<span class="hidden-tablet">/PERSONAL</span></strong> <span
+                    id="objN10">(204)</span><span class="chbx"></span>
+            </label>
+        </div>
+        <!-- accordion-inner -->
+        <div class="accordion-inner clearfix">
+            <input type="checkbox" id="cb11" name="photo" value="1">
+            <label for="cb11" class="checkbox field">
+                <strong>PHOTOGRAPHY</strong> <span id="objN11">(27)</span><span class="chbx"></span>
+            </label>
+        </div>
+        <!-- accordion-inner -->
+        <div class="accordion-inner clearfix">
+            <input type="checkbox" id="cb12" name="ecommerce" value="1">
+            <label for="cb12" class="checkbox field">
+                <strong>ECOMMERCE</strong> <span id="objN12">(45)</span><span class="chbx"></span>
+            </label>
+        </div>
+        <!-- accordion-inner -->
+        <div class="accordion-inner clearfix">
+            <input type="checkbox" id="cb13" name="community" value="1">
+            <label for="cb13" class="checkbox field">
+                <strong>COMMUNITY</strong> <span id="objN13">(5)</span><span class="chbx"></span>
+            </label>
+        </div>
+        <!-- accordion-inner -->
+        <div class="accordion-inner clearfix">
+            <input type="checkbox" id="cb14" name="forum" value="1">
+            <label for="cb14" class="checkbox field">
+                <strong>FORUM</strong> <span id="objN14">(10)</span><span class="chbx"></span>
+            </label>
+        </div>
+        <!-- accordion-inner -->
+    </div>
+    <!-- accordion-heading-sub -->
+</div>
+<!-- accordion-group -->
+<div class="accordion-group">
+    <div class="accordion-heading">
+        <a class="accordion-toggle" data-toggle="collapse" data-target="#collapseOne" href="#">
+            CMS
+        </a>
+    </div>
+    <!-- accordion-heading -->
+    <div id="collapseOne" class="accordion-body collapse" style="height: 0px;">
+        <div class="accordion-inner clearfix">
+            <input type="checkbox" id="cb1" name="wordpress" value="1">
+            <label for="cb1" class="checkbox field">
+                <strong>WORDPRESS</strong> <span id="objN1">(216)</span><span class="chbx"></span>
+            </label>
+        </div>
+        <!-- accordion-inner -->
+        <div class="accordion-inner clearfix">
+            <input type="checkbox" id="cb2" name="joomla" value="1">
+            <label for="cb2" class="checkbox field">
+                <strong>JOOMLA!</strong> <span id="objN2">(21)</span><span class="chbx"></span>
+            </label>
+        </div>
+        <!-- accordion-inner -->
+        <div class="accordion-inner clearfix">
+            <input type="checkbox" id="cb3" name="drupal" value="1">
+            <label for="cb3" class="checkbox field">
+                <strong>DRUPAL</strong> <span id="objN3">(11)</span><span class="chbx"></span>
+            </label>
+        </div>
+        <!-- accordion-inner -->
+        <div class="accordion-inner clearfix">
+            <input type="checkbox" id="cb4" name="magento" value="1">
+            <label for="cb4" class="checkbox field">
+                <strong>MAGENTO</strong> <span id="objN4">(14)</span><span class="chbx"></span>
+            </label>
+        </div>
+        <!-- accordion-inner -->
+        <div class="accordion-inner clearfix">
+            <input type="checkbox" id="cb5" name="tumblr" value="1">
+            <label for="cb5" class="checkbox field">
+                <strong>TUMBLR</strong> <span id="objN5">(25)</span><span class="chbx"></span>
+            </label>
+        </div>
+        <!-- accordion-inner -->
+        <div class="accordion-inner clearfix">
+            <input type="checkbox" id="cb6" name="custom" value="1">
+            <label for="cb6" class="checkbox field">
+                <strong>GHOST</strong> <span id="objN6">(40)</span><span class="chbx"></span>
+            </label>
+        </div>
+        <!-- accordion-inner -->
+        <div class="accordion-inner clearfix">
+            <input type="checkbox" id="cb7" name="others" value="1">
+            <label for="cb7" class="checkbox field">
+                <strong>OTHERS</strong> <span id="objN7">(2)</span><span class="chbx"></span>
+            </label>
+        </div>
+        <!-- accordion-inner -->
+    </div>
+    <!-- accordion-heading-sub -->
+</div>
+<!-- accordion-group -->
+
+<div class="accordion-group">
+    <div class="accordion-heading">
+        <a class="accordion-toggle" data-toggle="collapse" data-target="#collapseThree" href="#">
+            PRICE
+        </a>
+    </div>
+    <!-- accordion-heading -->
+    <div id="collapseThree" class="accordion-body collapse">
+        <div class="accordion-inner clearfix">
+            <div id="slider-wrap">
+                <div id="slider" class="noUiSlider horizontal"><a style="left: 0%;">
+                    <div></div>
+                </a><a style="left: 100%;">
+                    <div></div>
+                </a><input type="hidden" name="" value="0.00"><input type="hidden" name="" value="61.00"></div>
+                <!-- slider -->
+            </div>
+            <!-- slider-wrap -->
+            <div class="slider-label">FROM <strong>$ <span class="from-value">0</span></strong> TO <strong>$ <span
+                    class="to-value">60+</span></strong>
+            </div>
+            <!-- slider-label -->
+        </div>
+        <!-- accordion-inner -->
+    </div>
+    <!-- accordion-heading-sub -->
+</div>
+<!-- accordion-group -->
+<div class="accordion-group">
+    <div class="accordion-heading">
+        <a class="accordion-toggle" data-toggle="collapse" data-target="#collapseFour" href="#">
+            LAYOUT
+        </a>
+    </div>
+    <!-- accordion-heading -->
+    <div id="collapseFour" class="accordion-body collapse">
+        <div class="accordion-inner clearfix">
+            <input type="checkbox" id="cb15" name="responsive" value="1">
+            <label for="cb15" class="checkbox field">
+                <strong>RESPONSIVE</strong> <span id="objN15">(314)</span><span class="chbx"></span>
+            </label>
+        </div>
+        <!-- accordion-inner -->
+        <div class="accordion-inner clearfix">
+            <input type="checkbox" id="cb16" name="retina" value="1">
+            <label for="cb16" class="checkbox field">
+                <strong>RETINA-READY</strong> <span id="objN16">(139)</span><span class="chbx"></span>
+            </label>
+        </div>
+        <!-- accordion-inner -->
+        <div class="accordion-inner clearfix">
+            <input type="checkbox" id="cb17" name="scrolling" value="1">
+            <label for="cb17" class="checkbox field">
+                <strong>ONE-PAGE<span class="hidden-tablet"> SCROLLING</span></strong> <span
+                    id="objN17">(56)</span><span
+                    class="chbx"></span>
+            </label>
+        </div>
+        <!-- accordion-inner -->
+    </div>
+    <!-- accordion-heading-sub -->
+</div>
+<!-- accordion-group -->
+<div class="accordion-group">
+    <div class="accordion-heading">
+        <a class="accordion-toggle" data-toggle="collapse" data-target="#collapseSix" href="#">
+            EXTRA
+        </a>
+    </div>
+    <!-- accordion-heading -->
+    <div id="collapseSix" class="accordion-body collapse">
+        <div class="accordion-inner clearfix">
+            <input type="checkbox" id="cb22" name="brand" value="1">
+            <label for="cb22" class="checkbox field">
+                <strong><span class="hidden-tablet">BRAND </span>NEW THEMES</strong> <span
+                    id="objN21">(27)</span><span class="chbx"></span>
+            </label>
+        </div>
+        <!-- accordion-inner -->
+        <div class="accordion-inner clearfix">
+            <input type="checkbox" id="cb19" name="shortcodes" value="1">
+            <label for="cb19" class="checkbox field">
+                <strong>SHORTCODES</strong> <span id="objN18">(163)</span><span class="chbx"></span>
+            </label>
+        </div>
+        <!-- accordion-inner -->
+        <div class="accordion-inner clearfix">
+            <input type="checkbox" id="cb20" name="ads" value="1">
+            <label for="cb20" class="checkbox field">
+                <strong>ADS-READY</strong> <span id="objN19">(23)</span><span class="chbx"></span>
+            </label>
+        </div>
+        <!-- accordion-inner -->
+        <div class="accordion-inner clearfix">
+            <input type="checkbox" id="cb21" name="cross" value="1">
+            <label for="cb21" class="checkbox field">
+                <strong>IE 6-8 COMPATIBLE</strong> <span id="objN20">(11)</span><span class="chbx"></span>
+            </label>
+        </div>
+        <!-- accordion-inner -->
+        <div class="accordion-inner clearfix">
+            <input type="checkbox" id="cb23" name="design" value="1">
+            <label for="cb23" class="checkbox field">
+                <strong>DESIGN <span class="hidden-tablet">PROJECT </span>FILES</strong> <span
+                    id="objN22">(110)</span><span class="chbx"></span>
+            </label>
+        </div>
+        <!-- accordion-inner -->
+        <div class="accordion-inner clearfix">
+            <input type="checkbox" id="cb24" name="doc" value="1">
+            <label for="cb24" class="checkbox field">
+                <strong>HELP FILES</strong> <span id="objN23">(309)</span><span class="chbx"></span>
+            </label>
+        </div>
+        <!-- accordion-inner -->
+        <div class="accordion-inner clearfix">
+            <input type="checkbox" id="cb25" name="support" value="1">
+            <label for="cb25" class="checkbox field">
+                <strong>ONLINE SUPPORT</strong> <span id="objN24">(310)</span><span class="chbx"></span>
+            </label>
+        </div>
+        <!-- accordion-inner -->
+    </div>
+    <!-- accordion-heading-sub -->
+</div>
+<!-- accordion-group -->
+</div>
+<!-- accordion -->
+</form>
+
