@@ -12,7 +12,7 @@
     <div title="Language" data-options="iconCls:'icon-ok'" style="overflow:auto;padding:10px;">
         <ul class="nav">
             <li class=""><a href="#"
-                            onclick="addTab(this.innerText,'http://www.baidu.com')">单个还是全部引入</a></li>
+                            onclick="addTab(this.innerText,'/catering/manager/menu/menugrid.jsp')">菜单管理</a></li>
             <li class=""><a href="#js-data-attrs" onclick="addTab(this.innerText,'http://www.qq.com')">Data属性</a>
             </li>
             <li class=""><a href="#js-programmatic-api"
