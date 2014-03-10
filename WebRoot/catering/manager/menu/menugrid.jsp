@@ -11,12 +11,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Build CRUD DataGrid with jQuery EasyUI - jQuery EasyUI Demo</title>
-    <link rel="stylesheet" type="text/css" href="http://www.jeasyui.com/easyui/themes/default/easyui.css">
-    <link rel="stylesheet" type="text/css" href="http://www.jeasyui.com/easyui/themes/icon.css">
-    <link rel="stylesheet" type="text/css" href="http://www.jeasyui.com/easyui/demo/demo.css">
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.6.min.js"></script>
-    <script type="text/javascript" src="http://www.jeasyui.com/easyui/jquery.easyui.min.js"></script>
-    <script type="text/javascript" src="http://www.jeasyui.com/easyui/jquery.edatagrid.js"></script>
+    <%@include file="../../common/include/easyui_header.jsp" %>
+    <%@include file="../../common/include/bootstrap_header.jsp" %>
+    <script type="text/javascript" src="/catering/common/scripts/jquery-easyui-1.3.5/plugins/jquery.datagrid.js"></script>
 </head>
 <body>
 <h2>CRUD DataGrid</h2>
@@ -26,7 +23,7 @@
     <div>Double click the row to begin editing.</div>
 </div>
 
-<table id="dg" title="My Users" style="width:700px;height:250px"
+<table id="dg" title="My Users" style=""
        toolbar="#toolbar" pagination="true" idField="id"
        rownumbers="true" fitColumns="true" singleSelect="true">
     <thead>
