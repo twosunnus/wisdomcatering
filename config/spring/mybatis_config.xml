@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+       default-autowire="byName">
 
     <!-- MyBatis定义数据源,同意加载配置 -->
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
@@ -26,6 +27,5 @@
     <!--&lt;!&ndash; 注意指定的映射器类必须是一个接口，而不是具体的实现类  &ndash;&gt;-->
     <!--<property name="mapperInterface" value="com.catering.common.mapper.IUserMapper"/>-->
     <!--</bean>-->
-
 
 </beans>

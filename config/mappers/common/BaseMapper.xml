@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper>
+<mapper namespace="com.catering.base.mapper.SqlMapper">
 
-    <resultMap type="com.catering.common.pojo.CommonPojo" id="commonPojo">
+    <resultMap type="CommonPojo" id="commonPojo">
         <result column="validFlag" property="validFlag"/>
         <result column="delFlag" property="delFlag"/>
         <result column="createDate" property="createDate"/>
