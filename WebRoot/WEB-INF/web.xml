@@ -64,6 +64,10 @@
         <url-pattern>/*</url-pattern>
     </filter-mapping>
 
+    <welcome-file-list>
+        <welcome-file>/catering/index.jsp</welcome-file>
+    </welcome-file-list>
+
     <!-- 设置session超时 -->
     <session-config>
         <session-timeout>30</session-timeout>
